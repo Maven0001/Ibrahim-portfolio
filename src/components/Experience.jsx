@@ -50,10 +50,10 @@ const Experience = () => {
       {datas.map((data) => (
         <div
           key={data.id}
-          className="group relative flex flex-col lg:flex-row justify-between align-top gap-4 p-4 
+          className="group relative flex flex-col lg:flex-row justify-between align-top gap-4 py-4 lg:p-4 
                      rounded-xl transition-colors duration-300 ease-in-out
                      hover:bg-white/2  
-                     hover:drop-shadow-lg "
+                     hover:drop-shadow-lg lg:border-none "
         >
           <a
             href={data.link}
@@ -67,7 +67,7 @@ const Experience = () => {
           </p>
           <div>
             <h1
-              className="font-semibold mb-2 text-xl lg:text-[20px] text-[#e6e6e6] origin-left transition-transform duration-300 ease-out
+              className="font-semibold mb-2 text-lg lg:text-[20px] text-[#e6e6e6] origin-left transition-transform duration-300 ease-out
                            group-hover:text-[#A48E12] group-hover:scale-98"
             >
               {data.title}
@@ -75,7 +75,7 @@ const Experience = () => {
                 <ArrowUpRight />
               </span>
             </h1>
-            <p className="font-normal lg:text-[14px] text-[#94a3b8] max-w-119">
+            <p className="font-normal text-sm leading-relaxed lg:text-[14px] text-[#94a3b8] max-w-119">
               {data.description}
             </p>
 
@@ -83,7 +83,7 @@ const Experience = () => {
               {data.stack.map((tech, index) => (
                 <span
                   key={index}
-                  className="bg-[#A48E12] rounded-2xl text-sm lg:rounded-4xl lg:text-[14px] text-white px-3 py-1"
+                  className="bg-[#A48E12]/10 text-[#A48E12] text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest"
                 >
                   {tech}
                 </span>

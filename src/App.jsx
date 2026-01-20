@@ -2,7 +2,15 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Experience from "./components/Experience";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+import MobileHeader from "./components/MobileHeader";
+import Project from "./components/Projects";
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -11,10 +19,15 @@ function App() {
 
   const scrollContainerRef = useRef(null);
 
+  // NAV LINK SCROLLS
   useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const isMobile = window.innerWidth < 1024;
     const observerOptions = {
-      root: scrollContainerRef.current,
-      rootMargin: "-10% 0px -85% 0px",
+      root: isMobile ? null : container,
+      rootMargin: isMobile ? "-10% 0px -70px 0px" : "-20% 0px -70% 0px",
       threshold: 0,
     };
 
@@ -34,15 +47,43 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  // MOUSE CURSOR HIGHLIGHT
+
   const handleMouseMove = (e) => {
     setMousePos({ x: e.clientX, y: e.clientY });
   };
 
+  // SKILL ARRAYS
+
+  const words = ["Frontend Engineer", "UI/UX Designer"];
+
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % words.length);
+        setFade(true);
+      }, 500);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  });
+
   return (
     <>
+      <MobileHeader
+        scrollContainerRef={scrollContainerRef}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+      {/* HERO */}
       <div
         onMouseMove={handleMouseMove}
-        className="lg:h-screen overflow-hidden grid  grid-cols-1 lg:grid-cols-[1fr_1.3fr] px-7 lg:px-20 "
+        className="lg:h-screen overflow-hidden grid  grid-cols-1 lg:grid-cols-[1fr_1.3fr] px-5 lg:px-20 "
       >
         <div
           className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
@@ -51,19 +92,60 @@ function App() {
           }}
         />
         {/* FIRST GRID */}
-        <header className="relative z-40 flex flex-col py-20 gap-4 lg:gap-6 lg:py-24">
+        <header
+          className="relative z-40 flex flex-col mt-20 mb:12
+         gap-4 lg:gap-6 lg:py-24"
+        >
           <div className="flex flex-col gap-2 items-start ">
             <h1 className="text-4xl lg:text-[48px] tracking-tight lg:font-semibold text-[#e6e6e6] ">
               Ibrahim Ayinde
             </h1>
-            <p className="lg:text-[20px] lg:font-medium text-[#e6e6e6]">
-              Frontend Engineer
+            <p
+              className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"} lg:text-[20px] lg:font-medium text-[#e6e6e6]  `}
+            >
+              {words[index]}
             </p>
           </div>
           <p className="text-sm lg:text-[16px] lg:font-normal leading-normal text-[#94a3b8]">
-            I build seamless interactive digital experiences one, <br />
+            I build seamless interactive digital experiences, one <br />
             component at a time.
           </p>
+
+          {/* SOCIAL LINKS */}
+          <div className="flex gap-6 mt-4">
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Instagram size={24} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Twitter size={24} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Linkedin size={24} />
+            </a>
+          </div>
 
           <nav className="hidden lg:flex flex-col gap-4 mt-16">
             {["about", "experience", "projects"].map((item) => (
@@ -103,6 +185,7 @@ function App() {
           ref={scrollContainerRef}
           className="relative z-40 overflow-y-auto no-scrollbar py-12 lg:py-24 scroll-smooth "
         >
+          {/* ABOUT SECTION */}
           <section
             id="about"
             className="flex flex-col gap-3 scroll-mt-24 min-h-125"
@@ -148,7 +231,7 @@ function App() {
           {/* EXPERIENCE SECTION */}
           <section
             id="experience"
-            className="scroll-mt-24 mt-45 flex flex-col gap-8 mb-32"
+            className="scroll-mt-24 mt-45 flex flex-col  gap-8 mb-32 min-h-screen"
           >
             <Experience />
             <a
@@ -163,8 +246,8 @@ function App() {
           </section>
 
           {/* PROJECTS SECTION */}
-          <section id="projects" className="scroll-mt-24 mb-32">
-            Projects
+          <section id="projects" className="scroll-mt-24 mb-32 min-h-screen">
+            <Project />
           </section>
         </div>
       </div>
