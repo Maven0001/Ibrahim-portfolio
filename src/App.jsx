@@ -111,42 +111,6 @@ function App() {
             component at a time.
           </p>
 
-          {/* SOCIAL LINKS */}
-          <div className="flex gap-6 mt-4">
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-            >
-              <Instagram size={24} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-            >
-              <Twitter size={24} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
-          </div>
-
           <nav className="hidden lg:flex flex-col gap-4 mt-16">
             {["about", "experience", "projects"].map((item) => (
               <a
@@ -177,61 +141,110 @@ function App() {
               </a>
             ))}
           </nav>
+
+          {/* SOCIAL LINKS */}
+          <div className="flex gap-6 mt-8 lg:mt-24">
+            <a
+              href="https://github.com/Maven0001"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="https://www.instagram.com/vetofield?igsh=cmIyajgxNDdqZ29z"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Instagram size={24} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Twitter size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ibrahim-ayinde-531015245/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+            >
+              <Linkedin size={24} />
+            </a>
+          </div>
         </header>
 
         {/* SECOND GRID */}
 
         <div
           ref={scrollContainerRef}
-          className="relative z-40 overflow-y-auto no-scrollbar py-12 lg:py-24 scroll-smooth "
+          className="relative z-40 overflow-y-auto no-scrollbar py-4 lg:py-24 scroll-smooth mt-20 "
         >
           {/* ABOUT SECTION */}
-          <section
-            id="about"
-            className="flex flex-col gap-3 scroll-mt-24 min-h-125"
-          >
-            <p className=" font-normal text-sm leading-relaxed lg:text-[16px] text-[#94a3b8]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+          <section id="about" className="flex flex-col gap-3 scroll-mt-24 ">
             <p className="font-normal text-sm leading-relaxed lg:text-[16px] text-[#94a3b8]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              I’ve always been fascinated by how a few lines of code can
+              transform a blank screen into a meaningful tool. What started as a
+              curiosity for making things "look pretty" evolved into a career of
+              engineering{" "}
+              <span className="text-[#e6e6e6] font-medium">
+                seamless digital experiences.
+              </span>{" "}
+              I discovered early on that the most successful products aren't
+              just visually stunning; they are built on a foundation of
+              performance, accessibility, and logical structure.
             </p>
+
+            {/* The Philosophy: Design meets Engineering */}
             <p className="font-normal text-sm leading-relaxed lg:text-[16px] text-[#94a3b8]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              My approach is simple:{" "}
+              <span className="text-[#A48E12]">
+                Empathy-driven design meets clean-code engineering.
+              </span>{" "}
+              I believe that a developer with a designer's eye is a powerful
+              asset. I don't just bridge the gap between Figma and React,I erase
+              it. I enjoy taking complex, abstract problems and turning them
+              into simple, elegant interface solutions that feel natural to the
+              user. Whether I'm wireframing a new user flow or refactoring a
+              complex component library, my focus is always on the human on the
+              other side of the screen.
+            </p>
+
+            {/* The Present: What you do day-to-day */}
+            <p className="font-normal text-sm leading-relaxed lg:text-[16px] text-[#94a3b8]">
+              Fast-forward to today, and I’ve had the opportunity to work on
+              projects ranging from building intuitive User Interfaces to
+              collaborating with developers to bring the design to life. My main
+              focus these days is building{" "}
+              <span className="text-[#e6e6e6] font-medium">
+                highly interactive and accessible products
+              </span>{" "}
+              that don't compromise on speed or aesthetics. I thrive in
+              environments where I can own the entire lifecycle of a feature,
+              from the initial sketch to the final deployment.
+            </p>
+
+            {/* The Future: Continuous learning */}
+            <p className="font-normal text-sm leading-relaxed lg:text-[16px] text-[#94a3b8]">
+              When I’m not at my desk, I’m constantly sharpening my skills in{" "}
+              <span className="text-[#e6e6e6] font-medium">
+                Frontend Engineering
+              </span>{" "}
+              to bring more life and inclusivity to the web. I’m a firm believer
+              in the "forever student" mindset, constantly exploring new ways to
+              push the boundaries of what’s possible in the browser.
             </p>
           </section>
 
           {/* EXPERIENCE SECTION */}
           <section
             id="experience"
-            className="scroll-mt-24 mt-45 flex flex-col  gap-8 mb-32 min-h-screen"
+            className="scroll-mt-24 mt-35 flex flex-col  gap-8 mb-35 min-h-screen"
           >
             <Experience />
             <a

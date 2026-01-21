@@ -12,8 +12,33 @@ const Project = () => {
       stack: ["React", "Tailwind", "Node.js", "MongoDB"],
       liveLink: "https://example.com",
       githubLink: "https://github.com",
+      icons: [
+        {
+          icon: <Github size={20} />,
+          url: "#",
+        },
+        {
+          icon: <ExternalLink size={20} />,
+          url: "#",
+        },
+      ],
     },
-    // Add more projects here
+    {
+      id: 1,
+      title: "Greenbin E-commerce",
+      image: "https://placehold.co/600x400/1e293b/e6e6e6?text=Project+1", // Replace with your image
+      description:
+        "A high-performance waste management platform built with React and Node.js. Features include real-time tracking and automated scheduling.",
+      stack: ["React", "Tailwind", "Node.js", "MongoDB"],
+      liveLink: "https://example.com",
+      githubLink: "https://github.com",
+      icons: [
+        {
+          icon: <ExternalLink size={20} />,
+          url: "#",
+        },
+      ],
+    },
   ];
 
   return (
@@ -57,24 +82,19 @@ const Project = () => {
               ))}
             </div>
 
-            {/* Links */}
-            <div className="flex gap-4 mt-4">
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
-              >
-                <ExternalLink size={24} />
-              </a>
+            {/* Icon links */}
+            <div className="flex flex-wrap gap-4 mt-4">
+              {project.icons.map((icon, index) => (
+                <a
+                  key={index}
+                  href={icon.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+                >
+                  {icon.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -5,43 +5,34 @@ const Experience = () => {
   const datas = [
     {
       id: 1,
-      title: "Junior Frontend Engineer - Greenbin  ",
-      period: 2024,
+      title: "User Interface Designer - DTI  ",
+      periodstart: 2022,
+      periodend: 2024,
       description: [
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Built intuitive User Interfaces that expresses great User Experience. I conducted user research and usability testing to inform my design decisions and collaborated with product managers and developers to ensure a smooth handoff of designs. Additionally, I contributed to the design system and maintained UI consistency across various projects.",
       ],
-      stack: ["React", "Javascript", "TailwindCss"],
-      link: "#",
+      stack: ["Figma", "Miro", "Jira"],
     },
     {
       id: 2,
-      title: "Senior Frontend Engineer - Greenbin  ",
-      period: 2015,
+      title: "UI Designer & Frontend Developer - Greenbin  ",
+      periodstart: 2024,
+      periodend: 2025,
       description: [
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Built intuitive User Interfaces that expresses great User Experience. I conducted user research and usability testing to inform my design decisions and collaborated with product managers and developers to ensure a smooth handoff of designs. Additionally, I contributed to the design system and maintained UI consistency across various projects.",
+        ,
       ],
-      stack: ["React", "Javascript", "TailwindCss"],
-      link: "#",
+      stack: ["Figma", "React", "Javascript", "TailwindCss", "Github"],
     },
     {
       id: 3,
-      title: "Senior Frontend Engineer - Greenbin  ",
-      period: 2015,
+      title: "User Interface Designer - Dev & Design  ",
+      periodstart: 2024,
+      periodend: 2024,
       description: [
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Collaborate with a team of designers to buid User Interfaces with great User Experience",
       ],
-      stack: ["React", "Javascript", "TailwindCss"],
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Senior Frontend Engineer - Greenbin  ",
-      period: 2015,
-      description: [
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      ],
-      stack: ["React", "Javascript", "TailwindCss"],
-      link: "#",
+      stack: ["Figma", "Jitter"],
     },
   ];
 
@@ -55,15 +46,16 @@ const Experience = () => {
                      hover:bg-white/2  
                      hover:drop-shadow-lg lg:border-none "
         >
-          <a
+          {/* LINK */}
+          {/* <a
             href={data.link}
             target="_blank"
             rel="noreferrer"
             className="absolute inset-0 z-20 cursor-pointer"
             aria-label={`View details for ${data.title}`}
-          />
+          /> */}
           <p className="font-normal text-sm lg:text-[14px] text-[#94a3b8] mt-1">
-            {data.period} - Present
+            {data.periodstart} - {data.periodend}
           </p>
           <div>
             <h1
