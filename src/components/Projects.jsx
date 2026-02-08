@@ -1,41 +1,61 @@
 import React from "react";
-import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
+import { Github, ExternalLink, ArrowUpRight, Figma } from "lucide-react";
 
 const Project = () => {
   const projects = [
     {
       id: 1,
-      title: "Greenbin E-commerce",
-      image: "https://placehold.co/600x400/1e293b/e6e6e6?text=Project+1", // Replace with your image
+      title: "Layr",
+      image: "/Layr.png",
       description:
-        "A high-performance waste management platform built with React and Node.js. Features include real-time tracking and automated scheduling.",
-      stack: ["React", "Tailwind", "Node.js", "MongoDB"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
+        "Designing shouldn’t start with dragging rectangles. AI Frame Expander was born from a simple question, what if you could turn an empty frame into a ready-to-edit layout with just a prompt? This tool reimagines how designers begin their creative process. Instead of staring at a blank frame, you describe your vision , “SaaS dashboard with sidebar and charts” and AI instantly expands it into a structured, responsive layout.",
+      stack: ["Figma"],
       icons: [
         {
-          icon: <Github size={20} />,
-          url: "#",
-        },
-        {
-          icon: <ExternalLink size={20} />,
-          url: "#",
+          icon: <Figma size={20} />,
+          url: "https://www.figma.com/design/vuGHkYTiX6Vo8wUM1me3no/Team-5?node-id=1057-33&t=L76FK9g5OhfrCGZA-1",
         },
       ],
     },
     {
-      id: 1,
-      title: "Greenbin E-commerce",
-      image: "https://placehold.co/600x400/1e293b/e6e6e6?text=Project+1", // Replace with your image
-      description:
-        "A high-performance waste management platform built with React and Node.js. Features include real-time tracking and automated scheduling.",
-      stack: ["React", "Tailwind", "Node.js", "MongoDB"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
+      id: 2,
+      title: "Luxura -Dynamic E-Commerce Product Catalog",
+      image: "/Luxura-product-catalog.png",
+      description: `A modern, production-ready e-commerce product catalog built with Next.js 14, Redux Toolkit, TypeScript, 
+      and Tailwind CSS. Features advanced filtering, sorting, pagination, and a stunning user interface.`,
+      stack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Redux",
+        "Framer-motion",
+      ],
+      icons: [
+        {
+          icon: <Figma size={20} />,
+          url: "https://www.figma.com/design/mFo5t1EVxHt15JWJgv5L9W/LUXURA?node-id=1-2&t=S5IpU1UpGYbYSuUs-1",
+        },
+        {
+          icon: <Github size={20} />,
+          url: "https://github.com/Maven0001/alx-project-nexus/tree/master/my-product-catalog",
+        },
+        {
+          icon: <ExternalLink size={20} />,
+          url: "https://luxura-product-catalog.vercel.app/",
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Tisha",
+      image: "",
+      description: `A modern, production-ready platform for individuals who are ready to learn and also creators who are ready to share their knowledge.`,
+      stack: ["Next.js", "React", "TypeScript", "Tailwind", "Redux"],
       icons: [
         {
           icon: <ExternalLink size={20} />,
-          url: "#",
+          url: "https://tisha.app",
         },
       ],
     },
@@ -61,9 +81,9 @@ const Project = () => {
           <div className="md:col-span-3 flex flex-col gap-2">
             <h3 className="text-[#e6e6e6] font-semibold text-lg transition-colors duration-300 group-hover:text-[#A48E12] group-hover:scale-98 flex items-center gap-2">
               {project.title}
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+              {/* <span className="inline-block ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
                 <ArrowUpRight />
-              </span>
+              </span> */}
             </h3>
 
             <p className="text-[#94a3b8] text-sm leading-relaxed">

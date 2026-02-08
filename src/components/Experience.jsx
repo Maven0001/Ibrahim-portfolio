@@ -15,24 +15,66 @@ const Experience = () => {
     },
     {
       id: 2,
-      title: "UI Designer & Frontend Developer - Greenbin  ",
-      periodstart: 2024,
-      periodend: 2025,
+      title: "Front-End Web Development - ALX Africa  ",
+      periodstart: 2025,
+      periodend: 2026,
       description: [
-        "Built intuitive User Interfaces that expresses great User Experience. I conducted user research and usability testing to inform my design decisions and collaborated with product managers and developers to ensure a smooth handoff of designs. Additionally, I contributed to the design system and maintained UI consistency across various projects.",
-        ,
+        "The ALX Front-End Development programme equips you with the skills to build stunning, interactive websites and web applications from the ground up.through hands-on projects that push you to design user-friendly websites",
       ],
-      stack: ["Figma", "React", "Javascript", "TailwindCss", "Github"],
+      stack: [
+        "Html",
+        "Css",
+        "Javascript",
+        "React",
+        "TailwindCss",
+        "Github",
+        "Figma",
+      ],
     },
     {
       id: 3,
+      title: "Front-End Web Pro-Development - ALX Africa  ",
+      periodstart: 2025,
+      periodend: 2026,
+      description: [
+        "A specialist Front-End Developer focuses on creating the user-facing part of a website or application, ensuring it is visually appealing, interactive, and functional. They bridge the gap between design and functionality, working closely with designers and back-end developers.",
+      ],
+      stack: [
+        "React",
+        "Typescript",
+        "Next.js",
+        "TailwindCss",
+        "Github",
+        "Figma",
+      ],
+    },
+    {
+      id: 4,
       title: "User Interface Designer - Dev & Design  ",
-      periodstart: 2024,
-      periodend: 2024,
+      periodstart: 2025,
+      periodend: 2025,
       description: [
         "Collaborate with a team of designers to buid User Interfaces with great User Experience",
       ],
       stack: ["Figma", "Jitter"],
+    },
+    {
+      id: 5,
+      title: "Meta Front-End Developer Professional Certificate",
+      periodstart: 2025,
+      periodend: 2026,
+      description: [
+        "Want to get started in the world of coding and build websites as a career? This certificate, designed by the software engineering experts at Meta—the creators of Facebook and Instagram, will prepare you for a career as a front-end developer",
+      ],
+      stack: [
+        "Html",
+        "Css",
+        "Javascript",
+        "React",
+        "TailwindCss",
+        "Github",
+        "Figma",
+      ],
     },
   ];
 
@@ -63,9 +105,9 @@ const Experience = () => {
                            group-hover:text-[#A48E12] group-hover:scale-98"
             >
               {data.title}
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+              {/* <span className="inline-block ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
                 <ArrowUpRight />
-              </span>
+              </span> */}
             </h1>
             <p className="font-normal text-sm leading-relaxed lg:text-[14px] text-[#94a3b8] max-w-119">
               {data.description}

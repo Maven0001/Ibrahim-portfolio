@@ -55,7 +55,7 @@ function App() {
 
   // SKILL ARRAYS
 
-  const words = ["Frontend Engineer", "UI/UX Designer"];
+  const words = ["Frontend Developer", "UI/UX Designer"];
 
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
