@@ -1,8 +1,17 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
 
 const Experience = () => {
   const datas = [
+    {
+      id: 2,
+      title: "UI/UX Designer - TIC  ",
+      periodstart: 2026,
+      periodend: "Present",
+      description: [
+        "Focused on building Intuitive products that solves real world problems with great user interfaces and user experiences",
+      ],
+      stack: ["Figma"],
+    },
     {
       id: 1,
       title: "User Interface Designer - DTI  ",
@@ -13,8 +22,9 @@ const Experience = () => {
       ],
       stack: ["Figma", "Miro", "Jira"],
     },
+
     {
-      id: 2,
+      id: 3,
       title: "Front-End Web Development - ALX Africa  ",
       periodstart: 2025,
       periodend: 2026,
@@ -32,7 +42,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Front-End Web Pro-Development - ALX Africa  ",
       periodstart: 2025,
       periodend: 2026,
@@ -49,7 +59,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: "User Interface Designer - Dev & Design  ",
       periodstart: 2025,
       periodend: 2025,
@@ -59,7 +69,7 @@ const Experience = () => {
       stack: ["Figma", "Jitter"],
     },
     {
-      id: 5,
+      id: 6,
       title: "Meta Front-End Developer Professional Certificate",
       periodstart: 2025,
       periodend: 2026,

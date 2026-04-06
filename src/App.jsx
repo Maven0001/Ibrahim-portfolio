@@ -8,6 +8,7 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  Figma,
 } from "lucide-react";
 import MobileHeader from "./components/MobileHeader";
 import Project from "./components/Projects";
@@ -108,7 +109,7 @@ function App() {
           </div>
           <p className="text-sm lg:text-[16px] lg:font-normal leading-normal text-[#94a3b8]">
             I build seamless interactive digital experiences, one <br />
-            component at a time.
+            component at a time. Adopting AI to improve productivity.
           </p>
 
           <nav className="hidden lg:flex flex-col gap-4 mt-16">
@@ -153,15 +154,15 @@ function App() {
               <Github size={24} />
             </a>
             <a
-              href="https://www.instagram.com/vetofield?igsh=cmIyajgxNDdqZ29z"
+              href="https://www.behance.net/Maven001"
               target="_blank"
               rel="noreferrer"
               className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
             >
-              <Instagram size={24} />
+              <Figma size={24} />
             </a>
             <a
-              href="#"
+              href="https://x.com/Chipzy02"
               target="_blank"
               rel="noreferrer"
               className="text-[#888888] hover:text-[#e6e6e6] transition-colors"

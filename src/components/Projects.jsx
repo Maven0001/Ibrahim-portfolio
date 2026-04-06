@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, ExternalLink, ArrowUpRight, Figma } from "lucide-react";
+import { Github, ExternalLink, Figma } from "lucide-react";
 
 const Project = () => {
   const projects = [
@@ -13,7 +13,7 @@ const Project = () => {
       icons: [
         {
           icon: <Figma size={20} />,
-          url: "https://www.figma.com/design/vuGHkYTiX6Vo8wUM1me3no/Team-5?node-id=1057-33&t=L76FK9g5OhfrCGZA-1",
+          url: "https://www.behance.net/gallery/237800975/LAYR",
         },
       ],
     },
@@ -48,6 +48,24 @@ const Project = () => {
     },
     {
       id: 3,
+      title: "Finview -Finance Dashboard",
+      image: "/Finview.png",
+      description: `A clean, interactive finance dashboard built with React,
+       TypeScript, Redux Toolkit, and Tailwind CSS.`,
+      stack: ["React", "TypeScript", "Tailwind", "Redux Toolkit", "Recharts"],
+      icons: [
+        {
+          icon: <Github size={20} />,
+          url: "https://github.com/Maven0001/finance-dashboard",
+        },
+        {
+          icon: <ExternalLink size={20} />,
+          url: "https://finview-lac.vercel.app/",
+        },
+      ],
+    },
+    {
+      id: 4,
       title: "Tisha",
       image: "",
       description: `A modern, production-ready platform for individuals who are ready to learn and also creators who are ready to share their knowledge.`,
