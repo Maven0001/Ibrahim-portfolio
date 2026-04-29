@@ -13,7 +13,27 @@ const Project = () => {
       icons: [
         {
           icon: <Figma size={20} />,
+
           url: "https://www.behance.net/gallery/237800975/LAYR",
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: "Shortly - URL Shortener",
+      image: "/desktop-design.jpg",
+      description: `A modern stunning user interface, production-ready URL shortener built with Html, Vanilla Javascript, and Bootstrap. It features a clean design, responsive layout, and seamless user experience across all devices.`,
+      stack: ["Html5", "Vanilla Javascript", "Bootstrap"],
+      icons: [
+        {
+          icon: <Github size={20} />,
+          text: "Github Repo",
+          url: "https://github.com/Maven0001/shortly",
+        },
+        {
+          icon: <ExternalLink size={20} />,
+          text: "Live Demo",
+          url: "https://shortly-sigma-five.vercel.app/",
         },
       ],
     },
@@ -34,14 +54,17 @@ const Project = () => {
       icons: [
         {
           icon: <Figma size={20} />,
+          text: "Figma Design",
           url: "https://www.figma.com/design/mFo5t1EVxHt15JWJgv5L9W/LUXURA?node-id=1-2&t=S5IpU1UpGYbYSuUs-1",
         },
         {
           icon: <Github size={20} />,
+          text: "Github Repo",
           url: "https://github.com/Maven0001/alx-project-nexus/tree/master/my-product-catalog",
         },
         {
           icon: <ExternalLink size={20} />,
+          text: "Live Demo",
           url: "https://luxura-product-catalog.vercel.app/",
         },
       ],
@@ -56,10 +79,12 @@ const Project = () => {
       icons: [
         {
           icon: <Github size={20} />,
+          text: "Github Repo",
           url: "https://github.com/Maven0001/finance-dashboard",
         },
         {
           icon: <ExternalLink size={20} />,
+          text: "Live Demo",
           url: "https://finview-lac.vercel.app/",
         },
       ],
@@ -73,6 +98,7 @@ const Project = () => {
       icons: [
         {
           icon: <ExternalLink size={20} />,
+          text: "Live Demo",
           url: "https://tisha.app",
         },
       ],
@@ -128,9 +154,9 @@ const Project = () => {
                   href={icon.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#888888] hover:text-[#e6e6e6] transition-colors"
+                  className="text-[#888888] hover:text-[#e6e6e6] transition-colors flex"
                 >
-                  {icon.icon}
+                  {icon.icon} {icon.text}
                 </a>
               ))}
             </div>
